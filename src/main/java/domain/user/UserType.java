@@ -1,4 +1,4 @@
-package domain.User;
+package domain.user;
 
 public enum UserType {
     ORGANISATION,
