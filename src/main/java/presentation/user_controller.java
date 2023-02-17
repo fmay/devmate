@@ -25,9 +25,7 @@ public class user_controller {
     public static void getUsers(Context context) {
         List<User> users = userDao.getAll();
         String json = new Gson().toJson(users);
-        System.out.println(json);
-
-        context.json(tempUsers);
+        context.json(json);
     }
 
     public static void getUser(Context context) {

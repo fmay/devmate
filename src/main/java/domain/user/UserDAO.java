@@ -17,6 +17,7 @@ public final class UserDAO implements Dao<User> {
 
     @Override
     public List<User> getAll() {
+
         return list;
     }
 
