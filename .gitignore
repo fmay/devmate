@@ -1,3 +1,5 @@
+*.env
+
 .mtj.tmp/
 *.class
 *.jar

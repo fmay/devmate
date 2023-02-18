@@ -5,6 +5,7 @@ import domain.user.User;
 import domain.user.UserDAO;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
+import repository.db.user.GetUsers;
 
 import java.util.List;
 
@@ -16,14 +17,12 @@ public class user_controller {
     public user_controller(Javalin app) {
         app.routes(() -> path("users", () -> {
             get(user_controller::getUsers);
-            path("{id}", () -> {
-                get(user_controller::getUser);
-            });
+            path("{id}", () -> get(user_controller::getUser));
         }));
     }
 
     public static void getUsers(Context context) {
-        List<User> users = userDao.getAll();
+        List<User> users = new GetUsers().execute();
         String json = new Gson().toJson(users);
         context.json(json);
     }
