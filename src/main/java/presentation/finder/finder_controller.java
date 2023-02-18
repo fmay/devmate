@@ -1,4 +1,4 @@
-package presentation;
+package presentation.finder;
 
 import io.javalin.Javalin;
 

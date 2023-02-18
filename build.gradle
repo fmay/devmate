@@ -18,6 +18,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.neo4j.driver:neo4j-java-driver:4.4.5'
     implementation 'io.github.cdimascio:dotenv-java:2.3.2'
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 }
 
 test {
