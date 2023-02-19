@@ -1,12 +1,10 @@
 package presentation.health;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import repository.db.health.Version;
+import services.health.HealthService;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -17,21 +15,20 @@ public class HealthController {
         logger.info("Initialised");
         app.routes(() -> path("health", () -> {
             path("ping", () -> get(this::ping));
-            path("neo4j", () -> get(this::neo4j));
+            path("database", () -> get(this::database));
         }));
     }
 
     public void ping(Context context) {
         logger.debug("ping()");
         context.result("pong");
-        int err = 10/0;
     }
 
-    public void neo4j(Context context) throws JsonProcessingException {
-        logger.debug("neo4j()");
-        var result = Version.execute();
-        context.json(new ObjectMapper().writeValueAsString(result));
-        logger.debug("Version : " + result);
+    public void database(Context context) {
+        logger.debug("database()");
+        String result = HealthService.database();
+        context.json(result);
+        logger.debug("DB Info : " + result);
     }
 
 }

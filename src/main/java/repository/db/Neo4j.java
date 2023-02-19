@@ -18,9 +18,6 @@ public class Neo4j {
         Session session = driver.session(SessionConfig.forDatabase(config.dbDatabase));
         return session.readTransaction(tx -> {
             Result result = tx.run(query);
-//            while (result.hasNext()) {
-//                System.out.println("Rec:" + result.next().get(0).toString());
-//            }
             return result.list();
         });
     }

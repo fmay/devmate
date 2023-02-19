@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import repository.db.user.GetUser;
 import repository.db.user.GetUsers;
+import services.user.UserService;
 
 import java.util.List;
 
@@ -32,18 +33,13 @@ public class UserController {
 
     public void getUsers(Context context) {
         logger.debug("getUsers()");
-        List<User> users = new GetUsers().execute();
-        String json = new Gson().toJson(users);
-        logger.debug("Got " + users.size() + " users");
-        context.json(json);
+        context.json(UserService.getUsers());
     }
 
     public void getUser(Context context) {
         logger.debug("getUser()");
         String id = context.queryParamAsClass("id", String.class).get();
-        User user = GetUser.execute(id);
-        logger.debug(user.toString());
-        context.json(user);
+        context.json(UserService.getUser(id));
     }
 
     public void updateUser(Context context) {
