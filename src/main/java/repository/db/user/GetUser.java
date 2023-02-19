@@ -13,9 +13,8 @@ import java.util.Map;
 
 public class GetUser {
 
-    private final Config config = Config.getInstance();
-
-    public User execute(String loggedInUserId) {
+    public static User execute(String loggedInUserId) {
+        final Config config = Config.getInstance();
         // Jackson mapper from N4J map to POJO
         final ObjectMapper jacksonMapper = new ObjectMapper();
         // For date processing

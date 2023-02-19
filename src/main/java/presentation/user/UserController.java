@@ -20,17 +20,17 @@ public class UserController {
         logger.info("Initialised");
         app.routes(() -> path("user", () -> {
             // Get all users
-            path("list", () -> get(UserController::getUsers));
+            path("list", () -> get(this::getUsers));
 
             // Get one user
-            get(UserController::getUser);
+            get(this::getUser);
 
             // Update a user
-            path("{id}", () -> put(UserController::updateUser));
+            path("{id}", () -> put(this::updateUser));
         }));
     }
 
-    public static void getUsers(Context context) {
+    public void getUsers(Context context) {
         logger.debug("getUsers()");
         List<User> users = new GetUsers().execute();
         String json = new Gson().toJson(users);
@@ -38,14 +38,14 @@ public class UserController {
         context.json(json);
     }
 
-    public static void getUser(Context context) {
+    public void getUser(Context context) {
         logger.debug("getUser()");
         String id = context.queryParamAsClass("id", String.class).get();
-        User user = new GetUser().execute(id);
+        User user = GetUser.execute(id);
         logger.debug(user.toString());
         context.json(user);
     }
 
-    public static void updateUser(Context context) {
+    public void updateUser(Context context) {
     }
 }

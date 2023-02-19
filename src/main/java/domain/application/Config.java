@@ -25,7 +25,6 @@ public class Config {
 
         // Connect to Neo4j
         db = new Neo4j(dbUri, dbUserName, dbPassword);
-
     }
 
     public static Config getInstance() {

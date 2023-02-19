@@ -1,5 +1,6 @@
 package org.example;
 import domain.application.Config;
+import presentation.health.HealthController;
 import presentation.user.UserController;
 import io.javalin.Javalin;
 
@@ -19,8 +20,8 @@ public class Main {
         app.start(7070);
 
         // Controllers
-        app.get("/", ctx -> ctx.result("Hello World"));
         new UserController(app);
+        new HealthController(app);
     }
 
 }
