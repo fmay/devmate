@@ -1,6 +1,6 @@
 package org.example;
 import domain.application.Config;
-import presentation.user.user_controller;
+import presentation.user.UserController;
 import io.javalin.Javalin;
 
 public class Main {
@@ -14,13 +14,11 @@ public class Main {
         app.start(7070);
 
         // Before
-        app.before(ctx -> {
-            System.out.println(ctx.path());
-        });
+        app.before(ctx -> System.out.println(ctx.path()));
 
         // Controllers
         app.get("/", ctx -> ctx.result("Hello World"));
-        user_controller userController = new user_controller(app);
+        new UserController(app);
     }
 
 }

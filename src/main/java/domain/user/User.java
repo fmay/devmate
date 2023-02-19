@@ -6,6 +6,15 @@ public class User {
     private boolean hasAvatar = false;
     private boolean hasBanner = false;
     private Skill[] skills;
+    private Profile profile;
+
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
 
     public String getUid() {
         return uid;

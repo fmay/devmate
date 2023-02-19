@@ -2,6 +2,7 @@ package repository.db.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.application.Config;
+import domain.user.Profile;
 import domain.user.Skill;
 import domain.user.User;
 import org.mapstruct.factory.Mappers;
@@ -14,7 +15,7 @@ public class GetUser {
 
     private final Config config = Config.getInstance();
 
-    public User execute(String loggedInUserId, String otherUserId) {
+    public User execute(String loggedInUserId) {
         // Jackson mapper from N4J map to POJO
         final ObjectMapper jacksonMapper = new ObjectMapper();
         // For date processing
@@ -33,18 +34,26 @@ public class GetUser {
         List<Record> result = config.db.readTx(query);
 
         // Get result components as Maps
-        var userMap = result.get(0).get("user").asMap();
-        var profileMap = result.get(0).get("profile").asMap();
-        List skillsList = result.get(0).get("skills").asList();
+        Map<String, Object> userMap = result.get(0).get("user").asMap();
+        Map<String, Object> profileMap = result.get(0).get("profile").asMap();
+        List<Object> skillsList = result.get(0).get("skills").asList();
         Skill[] skillsArray = new Skill[skillsList.size()];
-        Integer index = 0;
+        int index = 0;
         for(var item: skillsList) {
-            Map map = ((InternalNode) item).asMap();
+            Map<String, Object> map = ((InternalNode) item).asMap();
             skillsArray[index++] = jacksonMapper.convertValue(map, Skill.class);
         }
+
+        // Sanitise user db data
         UserDB udb = jacksonMapper.convertValue(userMap, UserDB.class);
         User user = mapper.dbToUserDto(udb);
+
+        // Assign skills
         user.setSkills(skillsArray);
+
+        // Assign profile
+        user.setProfile(jacksonMapper.convertValue(profileMap, Profile.class));
+
         return user;
     }
 }

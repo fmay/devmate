@@ -2,11 +2,8 @@ package repository.db.user;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.application.Config;
 import domain.user.User;
-import domain.user.UserType;
 import org.mapstruct.factory.Mappers;
 import org.neo4j.driver.Record;
-
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,13 +25,11 @@ public class GetUsers {
         List<Record> result = config.db.readTx(query);
 
         // Convert results to List<User>
-        List<User> myList = result.stream()
+        return result.stream()
             .map(record -> {
                 UserDB udb = objectMapper.convertValue(record.get("u").asMap(), UserDB.class);
                 return mapper.dbToUserDto(udb);
             })
             .collect(Collectors.toList());
-
-        return myList;
     }
 }
