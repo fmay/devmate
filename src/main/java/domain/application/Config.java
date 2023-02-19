@@ -32,7 +32,6 @@ public class Config {
         if (Config.instance == null) {
             Config.instance = new Config();
         }
-
         return Config.instance;
     }
 }
