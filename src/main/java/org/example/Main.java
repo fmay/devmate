@@ -19,6 +19,9 @@ public class Main {
         Javalin app = Javalin.create();
         app.start(7070);
 
+        // Global exception handler
+        app.exception(Exception.class, (e, ctx) -> logger.error("Uncaught exception : "  + e));
+
         // Controllers
         new UserController(app);
         new HealthController(app);

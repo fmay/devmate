@@ -24,6 +24,7 @@ public class HealthController {
     public void ping(Context context) {
         logger.debug("ping()");
         context.result("pong");
+        int err = 10/0;
     }
 
     public void neo4j(Context context) throws JsonProcessingException {
