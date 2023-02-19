@@ -1,16 +1,10 @@
 package presentation.user;
 
-import com.google.gson.Gson;
-import domain.user.User;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import repository.db.user.GetUser;
-import repository.db.user.GetUsers;
 import services.user.UserService;
-
-import java.util.List;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 

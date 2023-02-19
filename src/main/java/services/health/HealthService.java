@@ -8,7 +8,7 @@ import java.util.Map;
 public class HealthService {
     public static String database() {
         try {
-            Map version = Version.execute();
+            Map<String, Object> version = Version.execute();
             return new ObjectMapper().writeValueAsString(version);
         }
         catch(Exception e) {
