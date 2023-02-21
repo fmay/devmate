@@ -7,7 +7,7 @@ import org.neo4j.driver.Record;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GetUsers {
+public class GetUsersRepository {
 
     private final Config config = Config.getInstance();
 

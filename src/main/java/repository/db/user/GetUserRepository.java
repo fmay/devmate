@@ -11,9 +11,9 @@ import org.neo4j.driver.internal.InternalNode;
 import java.util.List;
 import java.util.Map;
 
-public class GetUser {
+public class GetUserRepository {
 
-    public static User execute(String loggedInUserId) {
+    public User execute(String loggedInUserId) {
         final Config config = Config.getInstance();
         // Jackson mapper from N4J map to POJO
         final ObjectMapper jacksonMapper = new ObjectMapper();

@@ -1,5 +1,6 @@
 package presentation.user;
 
+import domain.user.User;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
@@ -10,9 +11,12 @@ import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class UserController {
     private static Logger logger;
+    private static UserService userService;
+
     public UserController(Javalin app) {
         logger = LoggerFactory.getLogger(getClass().getName());
         logger.info("Initialised");
+        userService = new UserService();
         app.routes(() -> path("user", () -> {
             // Get all users
             path("list", () -> get(this::getUsers));
@@ -27,13 +31,13 @@ public class UserController {
 
     public void getUsers(Context context) {
         logger.debug("getUsers()");
-        context.json(UserService.getUsers());
+        context.json(userService.getUsers());
     }
 
     public void getUser(Context context) {
         logger.debug("getUser()");
         String id = context.queryParamAsClass("id", String.class).get();
-        context.json(UserService.getUser(id));
+        context.json(userService.getUser(id));
     }
 
     public void updateUser(Context context) {

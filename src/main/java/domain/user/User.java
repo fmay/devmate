@@ -8,6 +8,14 @@ public class User {
     private Skill[] skills;
     private Profile profile;
 
+    // Constructor
+    public User(String uid, UserType userType, boolean hasAvatar, boolean hasBanner) {
+        this.uid = uid;
+        this.userType = userType;
+        this.hasAvatar = hasAvatar;
+        this.hasBanner = hasBanner;
+    }
+
     public Profile getProfile() {
         return profile;
     }
@@ -55,13 +63,5 @@ public class User {
     public void setHasBanner(boolean hasBanner) {
         this.hasBanner = hasBanner;
     }
-
-    public User(String uid, UserType userType, boolean hasAvatar, boolean hasBanner) {
-        this.uid = uid;
-        this.userType = userType;
-        this.hasAvatar = hasAvatar;
-        this.hasBanner = hasBanner;
-    }
-
 
 }
