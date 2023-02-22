@@ -33,13 +33,7 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.5.3.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 
-
-
-
-//    implementation 'ch.qos.logback:logback-classic:1.2.3'
-//    implementation 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
-//    implementation 'ch.qos.logback.contrib:logback-jackson:0.1.5'
-//    implementation 'org.codehaus.janino:janino:3.0.8'
+    // Validation
 }
 
 test {

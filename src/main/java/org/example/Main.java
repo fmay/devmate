@@ -1,5 +1,6 @@
 package org.example;
 import domain.application.Config;
+import presentation.finder.FinderController;
 import presentation.health.HealthController;
 import presentation.user.UserController;
 import io.javalin.Javalin;
@@ -25,6 +26,7 @@ public class Main {
         // Controllers
         new UserController(app);
         new HealthController(app);
+        new FinderController(app);
     }
 
 }
