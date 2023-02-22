@@ -1,5 +1,5 @@
 package org.example;
-import domain.application.Config;
+import core.config.Config;
 import presentation.finder.FinderController;
 import presentation.health.HealthController;
 import presentation.user.UserController;
@@ -21,7 +21,11 @@ public class Main {
         app.start(7070);
 
         // Global exception handler
-        app.exception(Exception.class, (e, ctx) -> logger.error("Uncaught exception : "  + e));
+        app.exception(Exception.class, (e, ctx) -> {
+            logger.error("Uncaught exception : "  + e);
+            ctx.status(404);
+            ctx.result(e.getMessage());
+        });
 
         // Controllers
         new UserController(app);

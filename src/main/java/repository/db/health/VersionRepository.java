@@ -1,6 +1,6 @@
 package repository.db.health;
 
-import domain.application.Config;
+import core.config.Config;
 import org.neo4j.driver.Record;
 
 import java.util.List;

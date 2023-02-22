@@ -1,5 +1,5 @@
 package repository.db;
-import domain.application.Config;
+import core.config.Config;
 import org.neo4j.driver.*;
 import org.neo4j.driver.Record;
 

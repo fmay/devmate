@@ -1,4 +1,4 @@
-package domain.application;
+package core.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import repository.db.Neo4j;

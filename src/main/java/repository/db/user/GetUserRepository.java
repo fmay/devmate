@@ -1,7 +1,7 @@
 package repository.db.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import domain.application.Config;
+import core.config.Config;
 import domain.user.Profile;
 import domain.user.Skill;
 import domain.user.User;

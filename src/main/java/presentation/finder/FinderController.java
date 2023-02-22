@@ -1,13 +1,12 @@
 package presentation.finder;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import domain.finder.FinderQueryDTO;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import services.finder.FinderService;
+
+import java.io.IOException;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -26,11 +25,8 @@ public final class FinderController {
         }));
     }
 
-    private void runQuery(Context ctx) throws JsonProcessingException {
-        // Convert body to FinderQuery
-        ObjectMapper mapper = new ObjectMapper();
-        FinderQueryDTO query = mapper.readValue(ctx.body(), FinderQueryDTO.class);
-        finderService.runQuery(query);
-        ctx.result("AAAA");
+    private void runQuery(Context ctx) throws IOException {
+        String json = finderService.runQuery(ctx.body());
+        ctx.result(json);
     }
 }
