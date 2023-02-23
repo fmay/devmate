@@ -15,7 +15,6 @@ import repository.db.finder.FinderRepository;
 import services.user.UserService;
 
 import java.io.IOException;
-import java.util.Map;
 import java.util.Set;
 
 public class FinderService {

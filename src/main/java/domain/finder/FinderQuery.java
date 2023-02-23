@@ -39,7 +39,6 @@ public class FinderQuery {
     @Range(min=0, max=100)
     public int limit;
 
-    @NotNull
     FinderQueryType type;
 
     Skill[] skills;
