@@ -7,6 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public record Skill(
    @JsonProperty("topLevelId") String topLevelId,
    @JsonProperty("skillId") String skillId,
-   @JsonProperty("level") Integer level
+   @JsonProperty("levelSkill") Integer level
 ) {
 }
