@@ -4,7 +4,8 @@ import io.javalin.Javalin;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.health.HealthService;
+import repository.db.health.HealthRepository;
+import services.health.HealthServiceImpl;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -26,7 +27,8 @@ public class HealthController {
 
     public void database(Context context) {
         logger.debug("database()");
-        String result = HealthService.database();
+        HealthRepository healthRepository = new HealthRepository();
+        String result = new HealthServiceImpl(healthRepository).databaseInfo();
         context.json(result);
         logger.debug("DB Info : " + result);
     }
