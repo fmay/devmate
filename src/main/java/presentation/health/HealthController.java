@@ -1,19 +1,26 @@
 package presentation.health;
 
+import com.google.inject.Inject;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import repository.db.health.HealthRepository;
-import services.health.HealthServiceImpl;
+import services.health.IHealthService;
+import services.logging.ILogging;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-public class HealthController {
-    private static Logger logger;
-    public HealthController(Javalin app) {
-        logger = LoggerFactory.getLogger(getClass().getName());
-        logger.info("Initialised");
+public class HealthController implements IHealthController {
+    private static ILogging _logger;
+
+    private IHealthService _healthService;
+
+    @Inject
+    public HealthController(IHealthService healthService, ILogging logger) {
+        _logger = logger;
+        _logger.info("Health controller initialised");
+        _healthService  = healthService;
+    }
+
+    public void init(Javalin app) {
         app.routes(() -> path("health", () -> {
             path("ping", () -> get(this::ping));
             path("database", () -> get(this::database));
@@ -21,16 +28,15 @@ public class HealthController {
     }
 
     public void ping(Context context) {
-        logger.debug("ping()");
+        _logger.debug("ping()");
         context.result("pong");
     }
 
     public void database(Context context) {
-        logger.debug("database()");
-        HealthRepository healthRepository = new HealthRepository();
-        String result = new HealthServiceImpl(healthRepository).databaseInfo();
+        _logger.debug("database()");
+        String result = _healthService.databaseInfo();
         context.json(result);
-        logger.debug("DB Info : " + result);
+        _logger.debug("DB Info : " + result);
     }
 
 }

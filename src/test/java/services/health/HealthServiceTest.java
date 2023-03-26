@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import repository.db.health.HealthRepository;
+import services.logging.ILogging;
 
 import java.util.Map;
 
@@ -11,18 +12,17 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class HealthServiceImplTest {
-
-    @InjectMocks
-    HealthServiceImpl healthServiceMock;
+class HealthServiceTest {
 
     private HealthRepository versionRepositoryMock;
-    private HealthServiceImpl healthService;
+    private ILogging loggingMock;
+    private HealthService healthService;
 
     @BeforeEach
     void setUp() {
         versionRepositoryMock = mock(HealthRepository.class);
-        healthService = new HealthServiceImpl(versionRepositoryMock);
+        loggingMock = mock(ILogging.class);
+        healthService = new HealthService(versionRepositoryMock, loggingMock);
     }
 
     @Test

@@ -6,7 +6,7 @@ import org.neo4j.driver.Record;
 import java.util.List;
 import java.util.Map;
 
-public class HealthRepository {
+public class HealthRepository implements IHealthRepository {
 
     public Map<String, Object> databaseInfo() {
         final Config config = Config.getInstance();
