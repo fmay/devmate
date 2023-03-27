@@ -17,6 +17,7 @@ public class GetUserRepository {
         final Config config = Config.getInstance();
         // Jackson mapper from N4J map to POJO
         final ObjectMapper jacksonMapper = new ObjectMapper();
+
         // For date processing
         jacksonMapper.findAndRegisterModules();
 
