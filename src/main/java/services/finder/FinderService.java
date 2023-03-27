@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.gson.Gson;
+import com.google.inject.Inject;
 import core.util.ValidationMessages;
 import domain.finder.FinderQuery;
 import domain.finder.FinderQueryType;
@@ -12,18 +13,35 @@ import jakarta.validation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import repository.db.finder.FinderRepository;
+import repository.db.finder.IFinderRepository;
+import repository.db.user.IGetUserRepository;
+import repository.db.user.IGetUsersRepository;
+import services.logging.ILogging;
 import services.user.UserService;
 
 import java.io.IOException;
 import java.util.Set;
 
-public class FinderService {
-    static Logger logger = LoggerFactory.getLogger(UserService.class.getName());
+public class FinderService implements IFinderService {
+
+    private final ILogging _logger;
+    private final IFinderRepository _repo;
+
+    @Inject
+    FinderService(ILogging logger,
+                  IFinderRepository finderRepository
+    ) {
+        _logger = logger;
+        _repo = finderRepository;
+    }
+
     static ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
     static Validator validator = factory.getValidator();
 
+    @Override
     public String runQuery(String body) throws IOException, ValidationException {
-        logger.info("getUser()");
+        _logger.debug("Finder Service runQuery()");
+
         // Convert body to FinderQuery
         ObjectMapper mapper = new ObjectMapper();
         JsonNode jsonTree = mapper.readTree(body);
@@ -55,7 +73,7 @@ public class FinderService {
         }
 
         // Run query
-        FinderResponse response = FinderRepository.execute(query);
+        FinderResponse response = _repo.execute(query);
         return new Gson().toJson(response);
     }
 }

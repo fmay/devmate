@@ -1,32 +1,37 @@
 package presentation.finder;
 
+import com.google.inject.Inject;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import services.finder.FinderService;
+import services.finder.IFinderService;
+import services.logging.ILogging;
 
 import java.io.IOException;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-public final class FinderController {
+public class FinderController implements IFinderController {
+    private final ILogging _logger;
+    private final IFinderService _finderService;
 
-    private static Logger logger;
-    private static FinderService finderService;
+    @Inject
+    public FinderController(ILogging logger, IFinderService finderService) {
+        _logger = logger;
+        _finderService = finderService;
+        logger.info("Finder controller Initialised");
+    }
 
-    public FinderController(Javalin app) {
-        logger = LoggerFactory.getLogger(getClass().getName());
-        logger.info("Initialised");
-        finderService = new FinderService();
-        app.routes(() -> path("finder", () -> {
+    @Override
+    public void init(Javalin javalin) {
+        javalin.routes(() -> path("finder", () -> {
             // Get one user
             post(this::runQuery);
         }));
     }
 
-    private void runQuery(Context ctx) throws IOException {
-        String json = finderService.runQuery(ctx.body());
+    @Override
+    public void runQuery(Context ctx) throws IOException {
+        String json = _finderService.runQuery(ctx.body());
         ctx.result(json);
     }
 }

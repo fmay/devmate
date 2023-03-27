@@ -10,7 +10,6 @@ import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class HealthController implements IHealthController {
     private static ILogging _logger;
-
     private IHealthService _healthService;
 
     @Inject

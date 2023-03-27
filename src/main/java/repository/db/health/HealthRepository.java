@@ -1,6 +1,7 @@
 package repository.db.health;
 
-import core.config.Config;
+import com.google.inject.Inject;
+import core.config.ISystemDatabase;
 import org.neo4j.driver.Record;
 
 import java.util.List;
@@ -8,10 +9,16 @@ import java.util.Map;
 
 public class HealthRepository implements IHealthRepository {
 
+    private final ISystemDatabase _db;
+
+    @Inject
+    public HealthRepository(ISystemDatabase db) {
+        _db = db;
+    }
+
     public Map<String, Object> databaseInfo() {
-        final Config config = Config.getInstance();
         String query = "call dbms.components() yield name, versions, edition unwind versions as version return name, version, edition;";
-        List<Record> result = config.db.readTx(query);
+        List<Record> result = _db.runQuery(query);
         return result.get(0).asMap();
     }
 

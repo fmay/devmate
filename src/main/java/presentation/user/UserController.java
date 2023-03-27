@@ -1,45 +1,47 @@
 package presentation.user;
 
-import domain.user.User;
+import com.google.inject.Inject;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import services.user.UserService;
+import services.logging.ILogging;
+import services.user.IUserService;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-public class UserController {
-    private static Logger logger;
-    private static UserService userService;
+public class UserController implements IUserController {
+    private ILogging _logger;
+    private IUserService _userService;
 
-    public UserController(Javalin app) {
-        logger = LoggerFactory.getLogger(getClass().getName());
-        logger.info("Initialised");
-        userService = new UserService();
+    @Inject
+    public UserController(IUserService userService, ILogging logger) {
+        _logger = logger;
+        _userService = userService;
+        _logger.info("User Controller initialised");
+    }
+
+    @Override
+    public void init(Javalin app) {
         app.routes(() -> path("user", () -> {
-            // Get all users
-            path("list", () -> get(this::getUsers));
-
-            // Get one user
+            path("list", () -> get(this::getAllUsers));
             get(this::getUser);
-
-            // Update a user
             path("{id}", () -> put(this::updateUser));
         }));
     }
 
-    public void getUsers(Context context) {
-        logger.debug("getUsers()");
-        context.json(userService.getUsers());
+    @Override
+    public void getAllUsers(Context context) {
+        _logger.debug("getUsers()");
+        context.json(_userService.getAllUsers());
     }
 
+    @Override
     public void getUser(Context context) {
-        logger.debug("getUser()");
+        _logger.debug("getUser()");
         String id = context.queryParamAsClass("id", String.class).get();
-        context.json(userService.getUser(id));
+        context.json(_userService.getUser(id));
     }
 
+    @Override
     public void updateUser(Context context) {
     }
 }

@@ -1,7 +1,8 @@
 package repository.db.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import core.config.Config;
+import com.google.inject.Inject;
+import core.config.ISystemDatabase;
 import domain.user.Profile;
 import domain.user.Skill;
 import domain.user.User;
@@ -11,10 +12,17 @@ import org.neo4j.driver.internal.InternalNode;
 import java.util.List;
 import java.util.Map;
 
-public class GetUserRepository {
+public class GetUserRepository implements IGetUserRepository {
 
+    private ISystemDatabase _db;
+
+    @Inject
+    public GetUserRepository(ISystemDatabase db) {
+        _db = db;
+    }
+
+    @Override
     public User execute(String loggedInUserId) {
-        final Config config = Config.getInstance();
         // Jackson mapper from N4J map to POJO
         final ObjectMapper jacksonMapper = new ObjectMapper();
 
@@ -31,7 +39,7 @@ public class GetUserRepository {
                 "RETURN user, profile, collect(distinct skills) as skills";
 
         // Run query
-        List<Record> result = config.db.readTx(query);
+        List<Record> result = _db.runQuery(query);
 
         // Get result components as Maps
         Map<String, Object> userMap = result.get(0).get("user").asMap();

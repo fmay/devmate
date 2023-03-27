@@ -1,16 +1,23 @@
 package repository.db.user;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import core.config.Config;
+import com.google.inject.Inject;
+import core.config.ISystemDatabase;
 import domain.user.User;
 import org.mapstruct.factory.Mappers;
 import org.neo4j.driver.Record;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GetUsersRepository {
+public class GetUsersRepository implements IGetUsersRepository {
 
-    private final Config config = Config.getInstance();
+    private ISystemDatabase _db;
 
+    @Inject
+    public GetUsersRepository(ISystemDatabase db) {
+        _db = db;
+    }
+
+    @Override
     public List<User> execute() {
         // Jackson mapper from N4J map to POJO
         final ObjectMapper objectMapper = new ObjectMapper();
@@ -22,7 +29,7 @@ public class GetUsersRepository {
 
         // Run query
         String query = "MATCH (u:User) return u";
-        List<Record> result = config.db.readTx(query);
+        List<Record> result = _db.runQuery(query);
 
         // Convert results to List<User>
         return result.stream()

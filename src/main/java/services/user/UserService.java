@@ -1,35 +1,46 @@
 package services.user;
 
 import com.google.gson.Gson;
+import com.google.inject.Inject;
 import domain.user.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import repository.db.user.GetUserRepository;
-import repository.db.user.GetUsersRepository;
+import repository.db.user.IGetUserRepository;
+import repository.db.user.IGetUsersRepository;
+import services.logging.ILogging;
 
 import java.util.List;
 
-public class UserService {
-    static Logger logger = LoggerFactory.getLogger(UserService.class.getName());
-    static final GetUsersRepository getUsersRepository = new GetUsersRepository();
-    static final GetUserRepository getUserRepository = new GetUserRepository();
+public class UserService implements IUserService {
+    private final ILogging _logger;
+    private final IGetUserRepository _getUserRepo;
+    private final IGetUsersRepository _getUsersRepo;
 
+    @Inject
+    UserService(ILogging logger,
+        IGetUserRepository getUserRepo,
+        IGetUsersRepository getUsersRepo
+    ) {
+        _logger = logger;
+        _getUserRepo = getUserRepo;
+        _getUsersRepo = getUsersRepo;
+    }
+
+
+    @Override
     public String getUser(String id) {
-        logger.info("getUser()");
-
-        User user = this.getUserRepository.execute(id);
+        _logger.info("getUser()");
+        User user = _getUserRepo.execute(id);
         String json = new Gson().toJson(user);
-
-        logger.debug("User " + user.getUid() + " " +
+        _logger.debug("User " + user.getUid() + " " +
                 user.getProfile().contact_first_name() + " " +
                 user.getProfile().contact_last_name());
         return json;
     }
 
-    public String getUsers() {
-        List<User> users = getUsersRepository.execute();
+    @Override
+    public String getAllUsers() {
+        List<User> users = _getUsersRepo.execute();
         String json = new Gson().toJson(users);
-        logger.debug("Got " + users.size() + " users");
+        _logger.debug("Got " + users.size() + " users");
         return json;
     }
 }
