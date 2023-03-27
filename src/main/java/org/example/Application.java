@@ -3,7 +3,7 @@ import core.dependencies.Dependencies;
 import io.javalin.Javalin;
 import services.logging.ILogging;
 
-public class Main {
+public class Application {
 
     public static void main(String[] args) {
 
@@ -16,7 +16,7 @@ public class Main {
 
         // Global exception handler
         javalin.exception(Exception.class, (e, ctx) -> {
-            logger.error("Uncaught exception : "  + e);
+            logger.error("Exception : "  + e);
             ctx.status(404);
             ctx.result(e.getMessage());
         });

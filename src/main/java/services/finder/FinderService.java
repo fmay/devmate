@@ -7,17 +7,10 @@ import com.google.gson.Gson;
 import com.google.inject.Inject;
 import core.util.ValidationMessages;
 import domain.finder.FinderQuery;
-import domain.finder.FinderQueryType;
 import domain.finder.FinderResponse;
 import jakarta.validation.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import repository.db.finder.FinderRepository;
 import repository.db.finder.IFinderRepository;
-import repository.db.user.IGetUserRepository;
-import repository.db.user.IGetUsersRepository;
 import services.logging.ILogging;
-import services.user.UserService;
 
 import java.io.IOException;
 import java.util.Set;
@@ -28,9 +21,7 @@ public class FinderService implements IFinderService {
     private final IFinderRepository _repo;
 
     @Inject
-    FinderService(ILogging logger,
-                  IFinderRepository finderRepository
-    ) {
+    FinderService(ILogging logger, IFinderRepository finderRepository) {
         _logger = logger;
         _repo = finderRepository;
     }

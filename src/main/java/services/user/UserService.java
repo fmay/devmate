@@ -3,6 +3,7 @@ package services.user;
 import com.google.gson.Gson;
 import com.google.inject.Inject;
 import domain.user.User;
+import jakarta.validation.ValidationException;
 import repository.db.user.IGetUserRepository;
 import repository.db.user.IGetUsersRepository;
 import services.logging.ILogging;
@@ -27,7 +28,10 @@ public class UserService implements IUserService {
 
     @Override
     public String getUser(String id) {
-        _logger.info("getUser()");
+        _logger.info(String.format("getUser(%s)", id));
+        if(id.length() < 10) {
+            throw new ValidationException("Id must be at least 10 characters long");
+        }
         User user = _getUserRepo.execute(id);
         String json = new Gson().toJson(user);
         _logger.debug("User " + user.getUid() + " " +

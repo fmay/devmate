@@ -13,7 +13,7 @@ import services.logging.Logging;
 public class LoggingModule extends AbstractModule {
 
     protected void configure() {
-        bind(ILogging.class).to(Logging.class);
+        bind(ILogging.class).to(Logging.class).asEagerSingleton();
     }
 
 }

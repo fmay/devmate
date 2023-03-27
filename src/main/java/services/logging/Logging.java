@@ -8,12 +8,12 @@ public class Logging implements ILogging {
     private Logger _logger;
 
     public Logging() {
-        _logger = LoggerFactory.getLogger("app***");
+        _logger = LoggerFactory.getLogger("");
         _logger.info("Logging initialised");
     }
 
     public void error (String text) {
-        _logger.error(text);
+        _logger.error(finalString(text));
     }
 
     public void warn (String text) {
@@ -21,10 +21,14 @@ public class Logging implements ILogging {
     }
 
     public void info (String text) {
-        _logger.info(text);
+        _logger.info(finalString(finalString(text)));
     }
 
     public void debug (String text) {
-        _logger.debug(text);
+        _logger.debug(finalString(text));
+    }
+
+    private String finalString(String text) {
+        return Thread.currentThread().getStackTrace()[2].getFileName() + ":" + text;
     }
 }
