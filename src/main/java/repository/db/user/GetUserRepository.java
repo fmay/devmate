@@ -9,6 +9,9 @@ import domain.user.User;
 import org.mapstruct.factory.Mappers;
 import org.neo4j.driver.Record;
 import org.neo4j.driver.internal.InternalNode;
+import repository.db.user.mappers.DbToUserMapper;
+import repository.db.user.mappers.UserDB;
+
 import java.util.List;
 import java.util.Map;
 
@@ -39,7 +42,7 @@ public class GetUserRepository implements IGetUserRepository {
                 "RETURN user, profile, collect(distinct skills) as skills";
 
         // Run query
-        List<Record> result = _db.runQuery(query);
+        List<Record> result = _db.readQuery(query);
 
         // Get result components as Maps
         Map<String, Object> userMap = result.get(0).get("user").asMap();
@@ -54,7 +57,7 @@ public class GetUserRepository implements IGetUserRepository {
 
         // Sanitise user db data
         UserDB udb = jacksonMapper.convertValue(userMap, UserDB.class);
-        User user = mapper.dbToUserDto(udb);
+        User user = mapper.dtoDbToUser(udb);
 
         // Assign skills
         user.setSkills(skillsArray);

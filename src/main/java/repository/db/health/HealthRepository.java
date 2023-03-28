@@ -18,7 +18,7 @@ public class HealthRepository implements IHealthRepository {
 
     public Map<String, Object> databaseInfo() {
         String query = "call dbms.components() yield name, versions, edition unwind versions as version return name, version, edition;";
-        List<Record> result = _db.runQuery(query);
+        List<Record> result = _db.readQuery(query);
         return result.get(0).asMap();
     }
 

@@ -1,4 +1,4 @@
-package repository.db.user;
+package repository.db.user.mappers;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

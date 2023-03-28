@@ -1,6 +1,5 @@
 package repository.db;
 import com.google.inject.Inject;
-import core.config.Config;
 import core.config.IConfig;
 import core.config.ISystemDatabase;
 import org.neo4j.driver.*;
@@ -8,7 +7,7 @@ import org.neo4j.driver.Record;
 
 import java.util.List;
 
-public class Neo4j implements ISystemDatabase {
+public class Neo4j implements ISystemDatabase<Record> {
 
     private final Driver _driver;
     private final IConfig _config;
@@ -20,10 +19,11 @@ public class Neo4j implements ISystemDatabase {
     }
 
     @Override
-    public List<Record> runQuery(String query) {
+    public List<Record> readQuery(String query) {
         return readTx(query);
     }
 
+    // Transactional read query
     public List<Record> readTx(String query) {
         Session session = _driver.session(SessionConfig.forDatabase(_config.dbDatabase()));
         return session.readTransaction(tx -> {
@@ -32,6 +32,7 @@ public class Neo4j implements ISystemDatabase {
         });
     }
 
+    // Transactional write query
     public List<Record> writeTx(String query) {
         Session session = _driver.session(SessionConfig.forDatabase(_config.dbUserName()));
         return session.writeTransaction(tx -> {

@@ -1,4 +1,4 @@
-package repository.db.user;
+package repository.db.user.mappers;
 
 import domain.user.User;
 import org.mapstruct.Mapper;

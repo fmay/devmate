@@ -9,7 +9,7 @@ import services.logging.Logging;
 public class DatabaseModule extends AbstractModule {
 
     protected void configure() {
-        bind(ISystemDatabase.class).to(Neo4j.class);
+        bind(ISystemDatabase.class).to(Neo4j.class).asEagerSingleton();
     }
 
 }

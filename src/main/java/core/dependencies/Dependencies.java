@@ -29,6 +29,8 @@ public class Dependencies {
 
         // Config
         injector.getInstance(IConfig.class);
+
+        // System DB
         injector.getInstance(ISystemDatabase.class);
 
         // Controllers and initialise
