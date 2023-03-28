@@ -28,11 +28,7 @@ public class GetUserRepository implements IGetUserRepository {
     public User execute(String loggedInUserId) {
         // Jackson mapper from N4J map to POJO
         final ObjectMapper jacksonMapper = new ObjectMapper();
-
-        // For date processing
         jacksonMapper.findAndRegisterModules();
-
-        // Mapper from DB POJO to Entity POJO
         DbToUserMapper mapper = Mappers.getMapper(DbToUserMapper.class);
 
         // Build query

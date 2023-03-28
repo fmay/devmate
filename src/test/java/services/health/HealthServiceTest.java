@@ -2,7 +2,6 @@ package services.health;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import repository.db.health.HealthRepository;
 import services.logging.ILogging;
 

@@ -15,23 +15,9 @@ public class FinderQuery {
 
     @Min(-90)
     @Max(90)
-    public  double meLng;
+    public double meLng;
 
-    @Min(-90)
-    @Max(90)
-    public  double tlLat;
-
-    @Min(-90)
-    @Max(90)
-    public  double tlLng;
-
-    @Min(-90)
-    @Max(90)
-    public  double brLat;
-
-    @Min(-90)
-    @Max(90)
-    public  double brLng;
+    public BoundingBox boundingBox;
 
     @Min(0)
     public int skip;
@@ -39,10 +25,10 @@ public class FinderQuery {
     @Range(min=0, max=100)
     public int limit;
 
-    FinderQueryType type;
+    public FinderQueryType type;
 
-    Skill[] skills;
-    String merlin;
+    public Skill[] skills;
+    public String merlin;
 
 }
 

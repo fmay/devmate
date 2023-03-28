@@ -11,12 +11,12 @@ import repository.db.user.mappers.UserDB;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GetUsersRepository implements IGetUsersRepository {
+public class GetAllUsersRepository implements IGetAllUsersRepository {
 
     private final Neo4j _db;
 
     @Inject
-    public GetUsersRepository(Neo4j db) {
+    public GetAllUsersRepository(Neo4j db) {
         _db = db;
     }
 

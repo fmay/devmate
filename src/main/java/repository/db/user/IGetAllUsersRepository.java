@@ -4,6 +4,6 @@ import domain.user.User;
 
 import java.util.List;
 
-public interface IGetUsersRepository {
+public interface IGetAllUsersRepository {
     List<User> execute();
 }

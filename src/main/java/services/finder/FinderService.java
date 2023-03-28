@@ -55,7 +55,6 @@ public class FinderService implements IFinderService {
 //        FinderQueryType enumValue = FinderQueryType.valueOf(enumString);
 //        ((ObjectNode)jsonTree).put("type", FinderQueryType.valueOf(""));
 
-
         // Map to class and validate
         FinderQuery query = mapper.convertValue(jsonTree, FinderQuery.class);
         Set<ConstraintViolation<FinderQuery>> constraintViolations = validator.validate(query);

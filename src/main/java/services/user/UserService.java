@@ -5,7 +5,7 @@ import com.google.inject.Inject;
 import domain.user.User;
 import jakarta.validation.ValidationException;
 import repository.db.user.IGetUserRepository;
-import repository.db.user.IGetUsersRepository;
+import repository.db.user.IGetAllUsersRepository;
 import services.logging.ILogging;
 
 import java.util.List;
@@ -13,18 +13,18 @@ import java.util.List;
 public class UserService implements IUserService {
     private final ILogging _logger;
     private final IGetUserRepository _getUserRepo;
-    private final IGetUsersRepository _getUsersRepo;
+    private final IGetAllUsersRepository _getAllUsersRepo;
 
     @Inject
-    UserService(ILogging logger,
+    UserService(
+        ILogging logger,
         IGetUserRepository getUserRepo,
-        IGetUsersRepository getUsersRepo
+        IGetAllUsersRepository getAllUsersRepo
     ) {
         _logger = logger;
         _getUserRepo = getUserRepo;
-        _getUsersRepo = getUsersRepo;
+        _getAllUsersRepo = getAllUsersRepo;
     }
-
 
     @Override
     public String getUser(String id) {
@@ -34,15 +34,13 @@ public class UserService implements IUserService {
         }
         User user = _getUserRepo.execute(id);
         String json = new Gson().toJson(user);
-        _logger.debug("User " + user.getUid() + " " +
-                user.getProfile().contact_first_name() + " " +
-                user.getProfile().contact_last_name());
+        _logger.debug("User " + user.getUid() + " ");
         return json;
     }
 
     @Override
     public String getAllUsers() {
-        List<User> users = _getUsersRepo.execute();
+        List<User> users = _getAllUsersRepo.execute();
         String json = new Gson().toJson(users);
         _logger.debug("Got " + users.size() + " users");
         return json;
