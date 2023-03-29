@@ -10,8 +10,8 @@ import api.v1.user.models.User;
 import org.mapstruct.factory.Mappers;
 import org.neo4j.driver.Record;
 import org.neo4j.driver.internal.InternalNode;
-import api.v1.user.models.DbToUserMapper;
-import api.v1.user.models.UserDB;
+import api.v1.user.mappers.DbToUserMapper;
+import api.v1.user.mappers.UserSummaryData;
 
 import java.util.List;
 import java.util.Map;
@@ -37,29 +37,27 @@ public class GetUserRepository implements IGetUserRepository {
         // Run query
         List<Record> result = _db.readQuery(query);
 
-        // Get Neo4J result components as Maps
+        // Get Neo4J query result components as Maps
         Map<String, Object> userMap = result.get(0).get("user").asMap();
         Map<String, Object> profileMap = result.get(0).get("profile").asMap();
         List<Object> skillsList = result.get(0).get("skills").asList();
         Skill[] skillsArray = new Skill[skillsList.size()];
 
-        // Map Skills to POJO
+        // Get basic User POJO and add profile data
         final ObjectMapper jacksonMapper = new ObjectMapper();
         jacksonMapper.registerModule(new JavaTimeModule());
+        UserSummaryData udb = jacksonMapper.convertValue(userMap, UserSummaryData.class);
         DbToUserMapper mapper = Mappers.getMapper(DbToUserMapper.class);
-        int index = 0;
-        for(var item: skillsList) {
-            Map<String, Object> map = ((InternalNode) item).asMap();
-            skillsArray[index++] = jacksonMapper.convertValue(map, Skill.class);
-        }
-
-        // Build complete User POJO to have skills and profile
-        UserDB udb = jacksonMapper.convertValue(userMap, UserDB.class);
         User user = mapper.dtoDbToUser(udb);
-
-        // Assign skills and profile to main User POJO
-        user.setSkills(skillsArray);
         user.setProfile(jacksonMapper.convertValue(profileMap, Profile.class));
+
+        // Add Skills to User POJO
+        int index = 0;
+        for(var skillItem: skillsList) {
+            Map<String, Object> skillMap = ((InternalNode) skillItem).asMap();
+            skillsArray[index++] = jacksonMapper.convertValue(skillMap, Skill.class);
+        }
+        user.setSkills(skillsArray);
 
         return user;
     }

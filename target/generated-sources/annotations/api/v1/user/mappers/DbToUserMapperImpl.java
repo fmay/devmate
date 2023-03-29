@@ -1,16 +1,18 @@
-package api.v1.user.models;
+package api.v1.user.mappers;
 
+import api.v1.user.models.User;
+import api.v1.user.models.UserType;
 import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-29T10:57:49+0100",
+    date = "2023-03-29T12:49:58+0100",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)"
 )
 public class DbToUserMapperImpl implements DbToUserMapper {
 
     @Override
-    public User dtoDbToUser(UserDB userDb) {
+    public User dtoDbToUser(UserSummaryData userDb) {
         if ( userDb == null ) {
             return null;
         }

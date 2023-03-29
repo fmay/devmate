@@ -5,8 +5,8 @@ import api.v1.user.models.User;
 import org.mapstruct.factory.Mappers;
 import org.neo4j.driver.Record;
 import api.v1.core.database.Neo4j;
-import api.v1.user.models.DbToUserMapper;
-import api.v1.user.models.UserDB;
+import api.v1.user.mappers.DbToUserMapper;
+import api.v1.user.mappers.UserSummaryData;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,21 +22,17 @@ public class GetAllUsersRepository implements IGetAllUsersRepository {
 
     @Override
     public List<User> execute() {
-        // Jackson mapper from N4J map to POJO
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.findAndRegisterModules();
-
-        // Mapper for DB object to Response POJO
-        DbToUserMapper mapper = Mappers.getMapper(DbToUserMapper.class);
-
         // Run query
         String query = "MATCH (u:User) return u";
         List<Record> result = _db.readQuery(query);
 
-        // Convert results to List<User>
+        // Jackson mapper from N4J map to POJO
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.findAndRegisterModules();
+        DbToUserMapper mapper = Mappers.getMapper(DbToUserMapper.class);
         return result.stream()
             .map(record -> {
-                UserDB udb = objectMapper.convertValue(record.get("u").asMap(), UserDB.class);
+                UserSummaryData udb = objectMapper.convertValue(record.get("u").asMap(), UserSummaryData.class);
                 return mapper.dtoDbToUser(udb);
             })
             .collect(Collectors.toList());
