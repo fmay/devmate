@@ -1,5 +1,6 @@
 package api.v1.user.repository;
 
+import api.v1.core.logging.ILogging;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.google.inject.Inject;
@@ -19,14 +20,18 @@ import java.util.Map;
 public class GetUserRepository implements IGetUserRepository {
 
     private ISystemDatabase _db;
+    private ILogging _logger;
 
     @Inject
-    public GetUserRepository(ISystemDatabase db) {
+    public GetUserRepository(ISystemDatabase db, ILogging logger) {
         _db = db;
+        _logger = logger;
     }
 
     @Override
     public User execute(String loggedInUserId) {
+
+        _logger.debug("N4J GetUser:" + loggedInUserId);
 
         // Build query
         String query = "MATCH (user:User {uid: '" + loggedInUserId + "'})" +

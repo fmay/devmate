@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: api.v1.integration.GetUserIT
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.904 s - in api.v1.integration.GetUserIT

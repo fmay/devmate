@@ -16,7 +16,7 @@ public class UserService implements IUserService {
     private final IGetAllUsersRepository _getAllUsersRepo;
 
     @Inject
-    UserService(
+    public UserService(
         ILogging logger,
         IGetUserRepository getUserRepo,
         IGetAllUsersRepository getAllUsersRepo

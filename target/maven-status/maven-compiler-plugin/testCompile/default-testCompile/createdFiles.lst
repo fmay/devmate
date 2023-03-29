@@ -1,0 +1,4 @@
+api/v1/integration/GetUserIT.class
+api/v1/user/service/UserServiceTest.class
+api/v1/health/service/HealthServiceTest.class
+services/finder/FinderServiceTest.class
