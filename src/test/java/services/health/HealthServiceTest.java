@@ -1,9 +1,10 @@
 package services.health;
 
+import api.v1.health.service.HealthService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import repository.db.health.HealthRepository;
-import services.logging.ILogging;
+import api.v1.health.repository.HealthRepository;
+import api.v1.core.logging.ILogging;
 
 import java.util.Map;
 

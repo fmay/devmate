@@ -1,7 +1,7 @@
 package org.example;
-import core.dependencies.Dependencies;
+import api.v1.core.modules.Dependencies;
 import io.javalin.Javalin;
-import services.logging.ILogging;
+import api.v1.core.logging.ILogging;
 
 public class Application {
 

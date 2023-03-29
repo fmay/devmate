@@ -1,12 +1,17 @@
 package services.finder;
 
+import api.v1.finder.models.BoundingBox;
+import api.v1.finder.models.Coord;
+import api.v1.finder.models.FinderQueryType;
+import api.v1.finder.request.FinderQuery;
+import api.v1.finder.response.FinderResponse;
+import api.v1.finder.service.FinderService;
 import com.google.gson.Gson;
-import domain.finder.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
-import repository.db.finder.IFinderRepository;
-import services.logging.ILogging;
+import api.v1.finder.repository.IFinderRepository;
+import api.v1.core.logging.ILogging;
 import java.io.IOException;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;

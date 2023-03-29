@@ -1,19 +1,17 @@
 package services.user;
 
+import api.v1.user.service.UserService;
 import com.google.gson.Gson;
-import domain.user.Profile;
-import domain.user.User;
-import domain.user.UserType;
+import api.v1.user.models.User;
+import api.v1.user.models.UserType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import repository.db.user.GetUserRepository;
-import repository.db.user.GetAllUsersRepository;
-import repository.db.user.IGetAllUsersRepository;
-import repository.db.user.IGetUserRepository;
-import services.logging.ILogging;
 
-import java.sql.Array;
+import api.v1.user.repository.IGetAllUsersRepository;
+import api.v1.user.repository.IGetUserRepository;
+import api.v1.core.logging.ILogging;
+
 import java.util.ArrayList;
 import java.util.List;
 
