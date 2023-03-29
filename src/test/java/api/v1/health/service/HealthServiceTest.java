@@ -1,5 +1,4 @@
-package services.health;
-
+package api.v1.health.service;
 import api.v1.health.service.HealthService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

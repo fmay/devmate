@@ -27,10 +27,6 @@ public class GetUserRepository implements IGetUserRepository {
 
     @Override
     public User execute(String loggedInUserId) {
-        // Jackson mapper from N4J map to POJO
-        final ObjectMapper jacksonMapper = new ObjectMapper();
-        jacksonMapper.registerModule(new JavaTimeModule());
-        DbToUserMapper mapper = Mappers.getMapper(DbToUserMapper.class);
 
         // Build query
         String query = "MATCH (user:User {uid: '" + loggedInUserId + "'})" +
@@ -41,25 +37,28 @@ public class GetUserRepository implements IGetUserRepository {
         // Run query
         List<Record> result = _db.readQuery(query);
 
-        // Get result components as Maps
+        // Get Neo4J result components as Maps
         Map<String, Object> userMap = result.get(0).get("user").asMap();
         Map<String, Object> profileMap = result.get(0).get("profile").asMap();
         List<Object> skillsList = result.get(0).get("skills").asList();
         Skill[] skillsArray = new Skill[skillsList.size()];
+
+        // Map Skills to POJO
+        final ObjectMapper jacksonMapper = new ObjectMapper();
+        jacksonMapper.registerModule(new JavaTimeModule());
+        DbToUserMapper mapper = Mappers.getMapper(DbToUserMapper.class);
         int index = 0;
         for(var item: skillsList) {
             Map<String, Object> map = ((InternalNode) item).asMap();
             skillsArray[index++] = jacksonMapper.convertValue(map, Skill.class);
         }
 
-        // Sanitise user db data
+        // Build complete User POJO to have skills and profile
         UserDB udb = jacksonMapper.convertValue(userMap, UserDB.class);
         User user = mapper.dtoDbToUser(udb);
 
-        // Assign skills
+        // Assign skills and profile to main User POJO
         user.setSkills(skillsArray);
-
-        // Assign profile
         user.setProfile(jacksonMapper.convertValue(profileMap, Profile.class));
 
         return user;

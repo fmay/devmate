@@ -2,7 +2,7 @@ package api.v1.finder.repository;
 
 import com.google.inject.Inject;
 import api.v1.core.database.ISystemDatabase;
-import api.v1.finder.request.FinderQuery;
+import api.v1.finder.request.FinderRequest;
 import api.v1.finder.response.FinderResponse;
 
 public class FinderRepository implements IFinderRepository {
@@ -14,7 +14,7 @@ public class FinderRepository implements IFinderRepository {
         _db = db;
     }
 
-    public FinderResponse execute(FinderQuery query) {
+    public FinderResponse execute(FinderRequest query) {
         // Does nothing right now other than return an empty object
         return new FinderResponse();
     }

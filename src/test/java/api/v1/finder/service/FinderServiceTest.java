@@ -3,10 +3,12 @@ package services.finder;
 import api.v1.finder.models.BoundingBox;
 import api.v1.finder.models.Coord;
 import api.v1.finder.models.FinderQueryType;
-import api.v1.finder.request.FinderQuery;
+import api.v1.finder.request.FinderRequest;
 import api.v1.finder.response.FinderResponse;
 import api.v1.finder.service.FinderService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
+import io.javalin.validation.ValidationException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,21 +34,28 @@ class FinderServiceTest {
 
     @Test
     void getUser() throws IOException {
-        FinderQuery query = new FinderQuery();
-        Coord tl = new Coord(52, 0.123);
-        Coord br = new Coord(57.1, -1.65);
-        BoundingBox bbox = new BoundingBox(tl, br);
-        query.boundingBox = bbox;
-        query.meLat = 52;
-        query.meLng = 0;
-        query.skip = 0;
-        query.limit = 0;
-        query.type = FinderQueryType.MAP;
+        String request = "{\n" +
+                "  \"meLat\": 52,\n" +
+                "  \"meLng\": 0,\n" +
+                "  \"skip\": 0,\n" +
+                "  \"limit\": 10,\n" +
+                "  \"type\": \"MAP\",\n" +
+                "  \"boundingBox\": {\n" +
+                "      \"topLeft\": {\n" +
+                "          \"lat\": 52,\n" +
+                "          \"lng\": 0.123\n" +
+                "      },\n" +
+                "      \"bottomRight\": {\n" +
+                "          \"lat\": 57.1,\n" +
+                "          \"lng\": -1.65\n" +
+                "      }\n" +
+                "  }\n" +
+                "}";
         FinderResponse expected = new FinderResponse();
         when(mockFinderRepo.execute(any())).thenReturn(expected);
-        String resultString = finderService.runQuery(new Gson().toJson(query));
+        String resultString = finderService.runQuery(request);
         FinderResponse resultFinderResponse = new Gson().fromJson(resultString, FinderResponse.class);
         assertThat(expected).usingRecursiveComparison()
-            .isEqualTo(resultFinderResponse);
+                .isEqualTo(resultFinderResponse);
     }
 }

@@ -1,6 +1,4 @@
-package services.user;
-
-import api.v1.user.service.UserService;
+package api.v1.user.service;
 import com.google.gson.Gson;
 import api.v1.user.models.User;
 import api.v1.user.models.UserType;
