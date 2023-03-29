@@ -8,6 +8,7 @@ import api.v1.core.database.ISystemDatabase;
 import api.v1.user.models.Profile;
 import api.v1.user.models.Skill;
 import api.v1.user.models.User;
+import io.javalin.http.HttpResponseException;
 import org.mapstruct.factory.Mappers;
 import org.neo4j.driver.Record;
 import org.neo4j.driver.internal.InternalNode;
@@ -41,6 +42,9 @@ public class GetUserRepository implements IGetUserRepository {
 
         // Run query
         List<Record> result = _db.readQuery(query);
+        if(result.size() == 0) {
+            throw new HttpResponseException(404);
+        }
 
         // Get Neo4J query result components as Maps
         Map<String, Object> userMap = result.get(0).get("user").asMap();

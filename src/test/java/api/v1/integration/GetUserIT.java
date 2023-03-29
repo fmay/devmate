@@ -5,18 +5,15 @@ import api.v1.core.database.ISystemDatabase;
 import api.v1.core.database.Neo4j;
 import api.v1.core.logging.ILogging;
 import api.v1.user.models.User;
-import api.v1.user.repository.GetAllUsersRepository;
 import api.v1.user.repository.GetUserRepository;
 import api.v1.user.repository.IGetAllUsersRepository;
 import api.v1.user.repository.IGetUserRepository;
-import api.v1.user.service.IUserService;
 import api.v1.user.service.UserService;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
 public class GetUserIT {
@@ -44,8 +41,22 @@ public class GetUserIT {
         IGetAllUsersRepository mockAll = mock(IGetAllUsersRepository.class);
         UserService userService = new UserService(logger, getUserRepository, mockAll);
         String json = userService.getUser("b8Pcx8ZidDuNevzocglxM9SxhpIs");
-        User user = new Gson().fromJson(json, User.class);
-        assertEquals(user.getUid(), "b8Pcx8ZidDuNevzocglxM9SxhpIs");
+        User userGood = new Gson().fromJson(json, User.class);
+        assertEquals(userGood.getUid(), "b8Pcx8ZidDuNevzocglxM9SxhpIs");
+        try {
+            json = userService.getUser("@@@@@@@@@@@@@@@@@@@@@@");
+            fail("Should have failed");
+        }
+        catch(Exception e) {
+            assertTrue(true);
+        }
+        try {
+            json = userService.getUser("");
+            fail("Should have failed");
+        }
+        catch(Exception e) {
+            assertTrue(true);
+        }
     }
 
 
