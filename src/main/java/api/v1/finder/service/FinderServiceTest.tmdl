@@ -1,0 +1,2893 @@
+{
+  "testitem_info": {
+    "ID": "a820d63b-eb0a-4d46-a057-01456d28ffd5",
+    "technique": {
+      "name": "EC",
+      "version": "3.0"
+    }
+  },
+  "model_data": {
+    "types": [
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.IllegalStateException",
+        "name": "IllegalStateException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.IndexOutOfBoundsException",
+        "name": "IndexOutOfBoundsException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.awt.image.RasterFormatException",
+        "name": "RasterFormatException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.swing.undo.CannotUndoException",
+        "name": "CannotUndoException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "org.w3c.dom.ls.LSException",
+        "name": "LSException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "org.omg.CORBA.SystemException",
+        "name": "SystemException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "precision": 7.0,
+        "sign": true,
+        "fullName": "float",
+        "name": "float",
+        "astTypeName": "FloatType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.AutoCloseable",
+        "name": "AutoCloseable",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.NullPointerException",
+        "name": "NullPointerException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "2bc9e934-5745-4dfe-b33d-b5bb5146cf1b",
+            "parameters": [],
+            "name": "getValidator",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.Validator",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "7eb2b383-ac6d-42fe-b1b6-758ace65c279",
+            "parameters": [],
+            "name": "usingContext",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "172c02bb-dcac-4ad9-a9b1-642efb51473f",
+            "parameters": [],
+            "name": "getMessageInterpolator",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.MessageInterpolator",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "da986c84-abef-429c-858b-bfbf5445db17",
+            "parameters": [],
+            "name": "getTraversableResolver",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.TraversableResolver",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "0afd0efd-a3c8-42a9-adef-9dbb073724d8",
+            "parameters": [],
+            "name": "getConstraintValidatorFactory",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ConstraintValidatorFactory",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "1d72d679-a2f6-401a-9318-1b456d0d1ea1",
+            "parameters": [],
+            "name": "getParameterNameProvider",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ParameterNameProvider",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "9e2ecf49-6337-4095-8459-ce42125b6365",
+            "parameters": [],
+            "name": "getClockProvider",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ClockProvider",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "767d8c09-194f-4996-ae03-d50748406d24",
+            "parameters": [
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<T>"
+              }
+            ],
+            "name": "unwrap",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "T extends java.lang.Object",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "1d8670ff-ea70-4343-b630-bd85dc731e6d",
+            "parameters": [],
+            "name": "close",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [
+          "java.lang.AutoCloseable"
+        ],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.ValidatorFactory",
+        "name": "ValidatorFactory",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.swing.undo.CannotRedoException",
+        "name": "CannotRedoException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.model.type.MirroredTypesException",
+        "name": "MirroredTypesException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.ValidationException",
+        "name": "ValidationException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.ArithmeticException",
+        "name": "ArithmeticException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.SecurityException",
+        "name": "SecurityException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.ConstraintViolation<T>",
+        "name": "ConstraintViolation",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.awt.image.ImagingOpException",
+        "name": "ImagingOpException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "fullName": "void",
+        "name": "void",
+        "astTypeName": "VoidType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.annotation.AnnotationTypeMismatchException",
+        "name": "AnnotationTypeMismatchException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "sign": true,
+        "fullName": "byte",
+        "name": "byte",
+        "astTypeName": "ByteType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "precision": 16.0,
+        "sign": true,
+        "fullName": "double",
+        "name": "double",
+        "astTypeName": "DoubleType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.Class<?>",
+        "name": "Class",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "org.w3c.dom.events.EventException",
+        "name": "EventException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.util.MissingResourceException",
+        "name": "MissingResourceException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.security.ProviderException",
+        "name": "ProviderException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.Exception",
+        "name": "Exception",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "eb6b2b61-3eae-4066-b6a1-cc5cfb19d98d",
+            "parameters": [
+              {
+                "name": "body",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "runQuery",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.String",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [
+          "api.v1.finder.service.FinderService"
+        ],
+        "fields": [],
+        "fullName": "api.v1.finder.service.IFinderService",
+        "name": "IFinderService",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.nio.file.FileSystemAlreadyExistsException",
+        "name": "FileSystemAlreadyExistsException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.reflect.MalformedParameterizedTypeException",
+        "name": "MalformedParameterizedTypeException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.print.attribute.UnmodifiableSetException",
+        "name": "UnmodifiableSetException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.ArrayStoreException",
+        "name": "ArrayStoreException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.util.ConcurrentModificationException",
+        "name": "ConcurrentModificationException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "api.v1.core.logging.Logging",
+        "name": "Logging",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.xml.crypto.NoSuchMechanismException",
+        "name": "NoSuchMechanismException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.xml.bind.TypeConstraintException",
+        "name": "TypeConstraintException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.awt.color.CMMException",
+        "name": "CMMException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.TypeNotPresentException",
+        "name": "TypeNotPresentException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "1a0efad3-afab-4f3e-8bc8-8278d6662076",
+            "parameters": [
+              {
+                "name": "t",
+                "fullTypeName": "T extends java.lang.Object"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validate",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "3ce913ef-99ec-425a-8655-a0fd9149acb7",
+            "parameters": [
+              {
+                "name": "t",
+                "fullTypeName": "T extends java.lang.Object"
+              },
+              {
+                "name": "s",
+                "fullTypeName": "java.lang.String"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validateProperty",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4683f466-bb77-4725-9745-5685e4b9f5c9",
+            "parameters": [
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<T>"
+              },
+              {
+                "name": "s",
+                "fullTypeName": "java.lang.String"
+              },
+              {
+                "name": "o",
+                "fullTypeName": "java.lang.Object"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validateValue",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "b9e42b05-acaa-466c-8d94-932c8e809b8b",
+            "parameters": [
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<?>"
+              }
+            ],
+            "name": "getConstraintsForClass",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.metadata.BeanDescriptor",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "763b1e2a-2475-41f0-be32-2aa296356712",
+            "parameters": [
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<T>"
+              }
+            ],
+            "name": "unwrap",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "T extends java.lang.Object",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "f64756ac-d697-4aab-acfa-888c09fa185e",
+            "parameters": [],
+            "name": "forExecutables",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.executable.ExecutableValidator",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.Validator",
+        "name": "Validator",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "elementFullTypeName": "jakarta.validation.ConstraintViolation<T>",
+        "fullName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+        "name": "Set",
+        "astTypeName": "ValueType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.AssertionError",
+        "name": "AssertionError",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.ClassCastException",
+        "name": "ClassCastException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "size": 64.0,
+        "sign": true,
+        "fullName": "long",
+        "name": "long",
+        "astTypeName": "LongIntegerType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.IllegalMonitorStateException",
+        "name": "IllegalMonitorStateException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.util.concurrent.RejectedExecutionException",
+        "name": "RejectedExecutionException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.Class<T>",
+        "name": "Class",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.EnumConstantNotPresentException",
+        "name": "EnumConstantNotPresentException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "org.w3c.dom.DOMException",
+        "name": "DOMException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "0863508b-107e-4ff4-9f19-f81b3565cef4",
+            "parameters": [
+              {
+                "name": "query",
+                "fullTypeName": "api.v1.finder.request.FinderRequest"
+              }
+            ],
+            "name": "execute",
+            "genericFullTypeNames": [],
+            "returnTypeName": "api.v1.finder.response.FinderResponse",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [
+          "api.v1.finder.repository.FinderRepository"
+        ],
+        "fields": [],
+        "fullName": "api.v1.finder.repository.IFinderRepository",
+        "name": "IFinderRepository",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.xml.bind.DataBindingException",
+        "name": "DataBindingException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.awt.color.ProfileDataException",
+        "name": "ProfileDataException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "fullName": "java.lang.String",
+        "name": "String",
+        "astTypeName": "StringType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.nio.BufferOverflowException",
+        "name": "BufferOverflowException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.util.NoSuchElementException",
+        "name": "NoSuchElementException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.NegativeArraySizeException",
+        "name": "NegativeArraySizeException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.management.JMRuntimeException",
+        "name": "JMRuntimeException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.UnsupportedOperationException",
+        "name": "UnsupportedOperationException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.invoke.WrongMethodTypeException",
+        "name": "WrongMethodTypeException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.util.EmptyStackException",
+        "name": "EmptyStackException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.annotation.IncompleteAnnotationException",
+        "name": "IncompleteAnnotationException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.nio.file.FileSystemNotFoundException",
+        "name": "FileSystemNotFoundException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.lang.model.UnknownEntityException",
+        "name": "UnknownEntityException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.io.IOException",
+        "name": "IOException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.nio.BufferUnderflowException",
+        "name": "BufferUnderflowException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.awt.geom.IllegalPathStateException",
+        "name": "IllegalPathStateException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "boundType": "COVARIANT",
+        "genericFullTypeNames": [
+          "java.lang.Object"
+        ],
+        "fullName": "T extends java.lang.Object",
+        "name": "T",
+        "astTypeName": "GenericsType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.IllegalArgumentException",
+        "name": "IllegalArgumentException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.reflect.UndeclaredThrowableException",
+        "name": "UndeclaredThrowableException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "size": 32.0,
+        "sign": true,
+        "fullName": "int",
+        "name": "int",
+        "astTypeName": "IntegerType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.util.IllformedLocaleException",
+        "name": "IllformedLocaleException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "fullName": "boolean",
+        "name": "boolean",
+        "astTypeName": "BooleanType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "javax.xml.ws.WebServiceException",
+        "name": "WebServiceException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "api.v1.finder.repository.FinderRepository",
+        "name": "FinderRepository",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "4399106c-d40a-4996-a929-1d6c0d476267",
+            "parameters": [
+              {
+                "name": "logger",
+                "fullTypeName": "api.v1.core.logging.ILogging"
+              },
+              {
+                "name": "finderRepository",
+                "fullTypeName": "api.v1.finder.repository.IFinderRepository"
+              }
+            ],
+            "name": "FinderService",
+            "genericFullTypeNames": [],
+            "returnTypeName": "api.v1.finder.service.FinderService",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "CONSTRUCTOR"
+          },
+          {
+            "UUID": "3868267d-99cf-47dd-a3c1-c3674539ec0c",
+            "parameters": [
+              {
+                "name": "body",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "runQuery",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.String",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [
+          "api.v1.finder.service.IFinderService"
+        ],
+        "childClasses": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "fullTypeName": "api.v1.core.logging.ILogging"
+          },
+          {
+            "name": "_repo",
+            "fullTypeName": "api.v1.finder.repository.IFinderRepository"
+          },
+          {
+            "name": "factory",
+            "fullTypeName": "jakarta.validation.ValidatorFactory"
+          },
+          {
+            "name": "validator",
+            "fullTypeName": "jakarta.validation.Validator"
+          }
+        ],
+        "fullName": "api.v1.finder.service.FinderService",
+        "name": "FinderService",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "sign": true,
+        "fullName": "char",
+        "name": "char",
+        "astTypeName": "CharacterType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "size": 16.0,
+        "sign": true,
+        "fullName": "short",
+        "name": "short",
+        "astTypeName": "ShortIntegerType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "632eec43-d731-4b32-bf15-b11d857598a5",
+            "parameters": [],
+            "name": "Object",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.Object",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "CONSTRUCTOR"
+          },
+          {
+            "UUID": "76d2f922-e6a4-475a-9a34-75e49c2ac650",
+            "parameters": [],
+            "name": "getClass",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.Class<?>",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "b274e8ae-6d01-46c3-b7d6-9aa976baa97d",
+            "parameters": [],
+            "name": "hashCode",
+            "genericFullTypeNames": [],
+            "returnTypeName": "int",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "e4ffcdc7-fc47-419e-97d8-457f9077b564",
+            "parameters": [
+              {
+                "name": "obj",
+                "fullTypeName": "java.lang.Object"
+              }
+            ],
+            "name": "equals",
+            "genericFullTypeNames": [],
+            "returnTypeName": "boolean",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "42ee438e-508f-4094-8740-cf49dd45d88e",
+            "parameters": [],
+            "name": "clone",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.Object",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "9d7c4fa6-a585-41ff-8759-32a453d0109c",
+            "parameters": [],
+            "name": "toString",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.String",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "e90d85df-6308-49eb-89f9-44f11a83d427",
+            "parameters": [],
+            "name": "notify",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "f3b7dfdd-4996-46b9-a49e-ff8432b2586c",
+            "parameters": [],
+            "name": "notifyAll",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "2f9b55f7-6018-4471-b9cc-68589341cbf6",
+            "parameters": [],
+            "name": "wait",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4651ac03-e435-4cb1-a1c2-28c23232f5e6",
+            "parameters": [
+              {
+                "name": "timeoutMillis",
+                "fullTypeName": "long"
+              }
+            ],
+            "name": "wait",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "cfa8e861-7652-450a-b582-24bc7098a33a",
+            "parameters": [
+              {
+                "name": "timeoutMillis",
+                "fullTypeName": "long"
+              },
+              {
+                "name": "nanos",
+                "fullTypeName": "int"
+              }
+            ],
+            "name": "wait",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "467d36df-8187-4502-8eb9-e659d9110b1a",
+            "parameters": [],
+            "name": "finalize",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.lang.Object",
+        "name": "Object",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "68e1beb1-e473-4cbf-bd87-efb27ebf1004",
+            "parameters": [
+              {
+                "name": "text",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "error",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "a7264164-1d58-48e4-8f38-6a33fe6ad325",
+            "parameters": [
+              {
+                "name": "text",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "warn",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4386d803-004a-49d0-9cb4-1174f49ee150",
+            "parameters": [
+              {
+                "name": "text",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "info",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "e15066ee-bca1-43e5-996d-75ece108d544",
+            "parameters": [
+              {
+                "name": "text",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "debug",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [
+          "api.v1.core.logging.Logging"
+        ],
+        "fields": [],
+        "fullName": "api.v1.core.logging.ILogging",
+        "name": "ILogging",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "elementFullTypeName": "java.lang.Class<?>",
+        "fullName": "java.lang.Class<?>...",
+        "name": "Class<?>...",
+        "astTypeName": "ArrayType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "java.nio.file.ProviderNotFoundException",
+        "name": "ProviderNotFoundException",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": true,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "1d920cfc-0cb1-457e-aafe-18a7d32a19c0",
+            "parameters": [],
+            "name": "FinderResponse",
+            "genericFullTypeNames": [],
+            "returnTypeName": "api.v1.finder.response.FinderResponse",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "CONSTRUCTOR"
+          },
+          {
+            "UUID": "1c1558cd-f44e-4fe1-b723-70f9d28c0118",
+            "parameters": [],
+            "name": "mapPoints",
+            "genericFullTypeNames": [],
+            "returnTypeName": "api.v1.finder.models.FinderPoint[]",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "a63e2d54-3b78-4b68-a638-75da2f9ec7e0",
+            "parameters": [],
+            "name": "listingPoints",
+            "genericFullTypeNames": [],
+            "returnTypeName": "api.v1.finder.models.FinderPoint[]",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "43c492b2-74e8-48fe-85ff-f6f239890693",
+            "parameters": [],
+            "name": "count",
+            "genericFullTypeNames": [],
+            "returnTypeName": "int",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "8617ef39-a1c1-4cc3-a87e-c2c625e5cc72",
+            "parameters": [
+              {
+                "name": "mapPoints",
+                "fullTypeName": "api.v1.finder.models.FinderPoint[]"
+              },
+              {
+                "name": "listingPoints",
+                "fullTypeName": "api.v1.finder.models.FinderPoint[]"
+              },
+              {
+                "name": "count",
+                "fullTypeName": "int"
+              }
+            ],
+            "name": "FinderResponse",
+            "genericFullTypeNames": [],
+            "returnTypeName": "api.v1.finder.response.FinderResponse",
+            "isAbstract": false,
+            "isStatic": false,
+            "methodType": "CONSTRUCTOR"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [
+          "java.lang.Record"
+        ],
+        "childClasses": [],
+        "fields": [
+          {
+            "name": "mapPoints",
+            "fullTypeName": "api.v1.finder.models.FinderPoint[]"
+          },
+          {
+            "name": "listingPoints",
+            "fullTypeName": "api.v1.finder.models.FinderPoint[]"
+          },
+          {
+            "name": "count",
+            "fullTypeName": "int"
+          }
+        ],
+        "fullName": "api.v1.finder.response.FinderResponse",
+        "name": "FinderResponse",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "elementFullTypeName": "api.v1.finder.models.FinderPoint",
+        "fullName": "api.v1.finder.models.FinderPoint[]",
+        "name": "FinderPoint[]",
+        "astTypeName": "ArrayType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "api.v1.finder.models.FinderPoint",
+        "name": "FinderPoint",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.Record",
+        "name": "Record",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [
+          {
+            "name": "meLat",
+            "fullTypeName": "double"
+          },
+          {
+            "name": "meLng",
+            "fullTypeName": "double"
+          },
+          {
+            "name": "boundingBox",
+            "fullTypeName": "api.v1.finder.models.BoundingBox"
+          },
+          {
+            "name": "skip",
+            "fullTypeName": "int"
+          },
+          {
+            "name": "limit",
+            "fullTypeName": "int"
+          },
+          {
+            "name": "type",
+            "fullTypeName": "api.v1.finder.models.FinderQueryType"
+          },
+          {
+            "name": "skills",
+            "fullTypeName": "api.v1.user.models.Skill[]"
+          },
+          {
+            "name": "merlin",
+            "fullTypeName": "java.lang.String"
+          }
+        ],
+        "fullName": "api.v1.finder.request.FinderRequest",
+        "name": "FinderRequest",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "api.v1.user.models.Skill",
+        "name": "Skill",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "enumLiterals": [
+          {
+            "value": "MAP"
+          },
+          {
+            "value": "LIST"
+          },
+          {
+            "value": "NAME"
+          },
+          {
+            "value": "COUNTS"
+          }
+        ],
+        "fullName": "api.v1.finder.models.FinderQueryType",
+        "name": "FinderQueryType",
+        "astTypeName": "EnumType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "api.v1.finder.models.BoundingBox",
+        "name": "BoundingBox",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "elementFullTypeName": "api.v1.user.models.Skill",
+        "fullName": "api.v1.user.models.Skill[]",
+        "name": "Skill[]",
+        "astTypeName": "ArrayType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "cfbbdb11-8981-42e6-89e3-a98972bc62c8",
+            "parameters": [],
+            "name": "isBeanConstrained",
+            "genericFullTypeNames": [],
+            "returnTypeName": "boolean",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "ff1b720b-421a-46a6-b950-b512b1b684c0",
+            "parameters": [
+              {
+                "name": "s",
+                "fullTypeName": "java.lang.String"
+              }
+            ],
+            "name": "getConstraintsForProperty",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.metadata.PropertyDescriptor",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "30250b5b-4450-467c-bc83-53cbb8af0b26",
+            "parameters": [],
+            "name": "getConstrainedProperties",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.util.Set<jakarta.validation.metadata.PropertyDescriptor>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "323d6259-9630-40da-ada5-345ea0de35d1",
+            "parameters": [
+              {
+                "name": "s",
+                "fullTypeName": "java.lang.String"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "getConstraintsForMethod",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.metadata.MethodDescriptor",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4c16b9d7-15ad-482c-b7a0-bb0f68f0a100",
+            "parameters": [
+              {
+                "name": "methodType",
+                "fullTypeName": "jakarta.validation.metadata.MethodType"
+              },
+              {
+                "name": "methodTypes",
+                "fullTypeName": "jakarta.validation.metadata.MethodType..."
+              }
+            ],
+            "name": "getConstrainedMethods",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.util.Set<jakarta.validation.metadata.MethodDescriptor>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "a4ad95cd-acc6-4846-9aec-baa73f8d6844",
+            "parameters": [
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "getConstraintsForConstructor",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.metadata.ConstructorDescriptor",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "f7b9cc6a-fa0b-4873-98a0-442737503cda",
+            "parameters": [],
+            "name": "getConstrainedConstructors",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.util.Set<jakarta.validation.metadata.ConstructorDescriptor>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [
+          "jakarta.validation.metadata.ElementDescriptor"
+        ],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.metadata.BeanDescriptor",
+        "name": "BeanDescriptor",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "elementFullTypeName": "jakarta.validation.metadata.MethodDescriptor",
+        "fullName": "java.util.Set<jakarta.validation.metadata.MethodDescriptor>",
+        "name": "Set",
+        "astTypeName": "ValueType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "enumLiterals": [
+          {
+            "value": "GETTER"
+          },
+          {
+            "value": "NON_GETTER"
+          }
+        ],
+        "fullName": "jakarta.validation.metadata.MethodType",
+        "name": "MethodType",
+        "astTypeName": "EnumType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.metadata.ElementDescriptor",
+        "name": "ElementDescriptor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "elementFullTypeName": "jakarta.validation.metadata.PropertyDescriptor",
+        "fullName": "java.util.Set<jakarta.validation.metadata.PropertyDescriptor>",
+        "name": "Set",
+        "astTypeName": "ValueType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.metadata.MethodDescriptor",
+        "name": "MethodDescriptor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.metadata.ConstructorDescriptor",
+        "name": "ConstructorDescriptor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "elementFullTypeName": "jakarta.validation.metadata.ConstructorDescriptor",
+        "fullName": "java.util.Set<jakarta.validation.metadata.ConstructorDescriptor>",
+        "name": "Set",
+        "astTypeName": "ValueType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "elementFullTypeName": "jakarta.validation.metadata.MethodType",
+        "fullName": "jakarta.validation.metadata.MethodType...",
+        "name": "MethodType...",
+        "astTypeName": "ArrayType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.metadata.PropertyDescriptor",
+        "name": "PropertyDescriptor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "74da9cd7-7952-4510-88e6-747dda549c6d",
+            "parameters": [
+              {
+                "name": "t",
+                "fullTypeName": "T extends java.lang.Object"
+              },
+              {
+                "name": "method",
+                "fullTypeName": "java.lang.reflect.Method"
+              },
+              {
+                "name": "objects",
+                "fullTypeName": "java.lang.Object[]"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validateParameters",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "82a7856b-c2ea-43f4-9626-ab9ad9a1b011",
+            "parameters": [
+              {
+                "name": "t",
+                "fullTypeName": "T extends java.lang.Object"
+              },
+              {
+                "name": "method",
+                "fullTypeName": "java.lang.reflect.Method"
+              },
+              {
+                "name": "o",
+                "fullTypeName": "java.lang.Object"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validateReturnValue",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "8ea0ce60-dcc0-4304-af66-7ab463f7285b",
+            "parameters": [
+              {
+                "name": "constructor",
+                "fullTypeName": "java.lang.reflect.Constructor<? extends T>"
+              },
+              {
+                "name": "objects",
+                "fullTypeName": "java.lang.Object[]"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validateConstructorParameters",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "b5051a93-7081-4b8d-827c-ecf984a7d25f",
+            "parameters": [
+              {
+                "name": "constructor",
+                "fullTypeName": "java.lang.reflect.Constructor<? extends T>"
+              },
+              {
+                "name": "t",
+                "fullTypeName": "T extends java.lang.Object"
+              },
+              {
+                "name": "classes",
+                "fullTypeName": "java.lang.Class<?>..."
+              }
+            ],
+            "name": "validateConstructorReturnValue",
+            "genericFullTypeNames": [
+              "T extends java.lang.Object"
+            ],
+            "returnTypeName": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.executable.ExecutableValidator",
+        "name": "ExecutableValidator",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.reflect.Constructor<? extends T>",
+        "name": "Constructor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "elementFullTypeName": "java.lang.Object",
+        "fullName": "java.lang.Object[]",
+        "name": "Object[]",
+        "astTypeName": "ArrayType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.reflect.Method",
+        "name": "Method",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "5185ab51-8495-4265-976e-ce8ebdecbec0",
+            "parameters": [
+              {
+                "name": "messageInterpolator",
+                "fullTypeName": "jakarta.validation.MessageInterpolator"
+              }
+            ],
+            "name": "messageInterpolator",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "f2104e7f-877d-47e2-b2d6-39a785c4763b",
+            "parameters": [
+              {
+                "name": "traversableResolver",
+                "fullTypeName": "jakarta.validation.TraversableResolver"
+              }
+            ],
+            "name": "traversableResolver",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4831b340-ef58-4936-8f57-85a076afb2c3",
+            "parameters": [
+              {
+                "name": "constraintValidatorFactory",
+                "fullTypeName": "jakarta.validation.ConstraintValidatorFactory"
+              }
+            ],
+            "name": "constraintValidatorFactory",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4ca084c2-f653-4859-929d-5ba7cae7f65f",
+            "parameters": [
+              {
+                "name": "parameterNameProvider",
+                "fullTypeName": "jakarta.validation.ParameterNameProvider"
+              }
+            ],
+            "name": "parameterNameProvider",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "026a31cb-71a0-46f2-b914-8e6a6c6fb77f",
+            "parameters": [
+              {
+                "name": "clockProvider",
+                "fullTypeName": "jakarta.validation.ClockProvider"
+              }
+            ],
+            "name": "clockProvider",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "4e46e31a-f73c-4b3b-839a-69120d090a25",
+            "parameters": [
+              {
+                "name": "valueExtractor",
+                "fullTypeName": "jakarta.validation.valueextraction.ValueExtractor<?>"
+              }
+            ],
+            "name": "addValueExtractor",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.ValidatorContext",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "c9b36212-5ed0-49b7-8976-ea89b6f55597",
+            "parameters": [],
+            "name": "getValidator",
+            "genericFullTypeNames": [],
+            "returnTypeName": "jakarta.validation.Validator",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.ValidatorContext",
+        "name": "ValidatorContext",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.valueextraction.ValueExtractor<?>",
+        "name": "ValueExtractor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "cfcd8f76-9b9a-4661-9ffb-804894827157",
+            "parameters": [
+              {
+                "name": "s",
+                "fullTypeName": "java.lang.String"
+              },
+              {
+                "name": "context",
+                "fullTypeName": "jakarta.validation.MessageInterpolator.Context"
+              }
+            ],
+            "name": "interpolate",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.String",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "c5545d8f-9021-4040-82d1-d4c84122fc90",
+            "parameters": [
+              {
+                "name": "s",
+                "fullTypeName": "java.lang.String"
+              },
+              {
+                "name": "context",
+                "fullTypeName": "jakarta.validation.MessageInterpolator.Context"
+              },
+              {
+                "name": "locale",
+                "fullTypeName": "java.util.Locale"
+              }
+            ],
+            "name": "interpolate",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.lang.String",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.MessageInterpolator",
+        "name": "MessageInterpolator",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.util.Locale",
+        "name": "Locale",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.MessageInterpolator.Context",
+        "name": "Context",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "92090c64-187e-4794-a93b-f6b4c2ad5e5c",
+            "parameters": [
+              {
+                "name": "o",
+                "fullTypeName": "java.lang.Object"
+              },
+              {
+                "name": "node",
+                "fullTypeName": "jakarta.validation.Path.Node"
+              },
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<?>"
+              },
+              {
+                "name": "path",
+                "fullTypeName": "jakarta.validation.Path"
+              },
+              {
+                "name": "elementType",
+                "fullTypeName": "java.lang.annotation.ElementType"
+              }
+            ],
+            "name": "isReachable",
+            "genericFullTypeNames": [],
+            "returnTypeName": "boolean",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "fc8c684f-6bfa-414f-b9d7-f6591dc45984",
+            "parameters": [
+              {
+                "name": "o",
+                "fullTypeName": "java.lang.Object"
+              },
+              {
+                "name": "node",
+                "fullTypeName": "jakarta.validation.Path.Node"
+              },
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<?>"
+              },
+              {
+                "name": "path",
+                "fullTypeName": "jakarta.validation.Path"
+              },
+              {
+                "name": "elementType",
+                "fullTypeName": "java.lang.annotation.ElementType"
+              }
+            ],
+            "name": "isCascadable",
+            "genericFullTypeNames": [],
+            "returnTypeName": "boolean",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.TraversableResolver",
+        "name": "TraversableResolver",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "enumLiterals": [
+          {
+            "value": "TYPE"
+          },
+          {
+            "value": "FIELD"
+          },
+          {
+            "value": "METHOD"
+          },
+          {
+            "value": "PARAMETER"
+          },
+          {
+            "value": "CONSTRUCTOR"
+          },
+          {
+            "value": "LOCAL_VARIABLE"
+          },
+          {
+            "value": "ANNOTATION_TYPE"
+          },
+          {
+            "value": "PACKAGE"
+          },
+          {
+            "value": "TYPE_PARAMETER"
+          },
+          {
+            "value": "TYPE_USE"
+          },
+          {
+            "value": "MODULE"
+          },
+          {
+            "value": "RECORD_COMPONENT"
+          }
+        ],
+        "fullName": "java.lang.annotation.ElementType",
+        "name": "ElementType",
+        "astTypeName": "EnumType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": false,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.Path.Node",
+        "name": "Node",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.Path",
+        "name": "Path",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "2d02f96e-77e6-405b-a5a7-9a49615b5197",
+            "parameters": [
+              {
+                "name": "aClass",
+                "fullTypeName": "java.lang.Class<T>"
+              }
+            ],
+            "name": "getInstance",
+            "genericFullTypeNames": [
+              "T extends jakarta.validation.ConstraintValidator<?,?>"
+            ],
+            "returnTypeName": "T extends jakarta.validation.ConstraintValidator<?,?>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "19575fb3-9242-473a-ab41-5ffbb2d48b04",
+            "parameters": [
+              {
+                "name": "constraintValidator",
+                "fullTypeName": "jakarta.validation.ConstraintValidator<?,?>"
+              }
+            ],
+            "name": "releaseInstance",
+            "genericFullTypeNames": [],
+            "returnTypeName": "void",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.ConstraintValidatorFactory",
+        "name": "ConstraintValidatorFactory",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "jakarta.validation.ConstraintValidator<?,?>",
+        "name": "ConstraintValidator",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "genericFullTypeNames": [
+          "jakarta.validation.ConstraintValidator<?,?>"
+        ],
+        "fullName": "T extends jakarta.validation.ConstraintValidator<?,?>",
+        "name": "T",
+        "astTypeName": "GenericsType",
+        "nullable": false,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "9a0f5a61-c174-47e4-84ce-0957d1e05709",
+            "parameters": [
+              {
+                "name": "constructor",
+                "fullTypeName": "java.lang.reflect.Constructor<?>"
+              }
+            ],
+            "name": "getParameterNames",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.util.List<java.lang.String>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          },
+          {
+            "UUID": "cae33b45-7a15-41ef-9472-284c1386b300",
+            "parameters": [
+              {
+                "name": "method",
+                "fullTypeName": "java.lang.reflect.Method"
+              }
+            ],
+            "name": "getParameterNames",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.util.List<java.lang.String>",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.ParameterNameProvider",
+        "name": "ParameterNameProvider",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "elementFullTypeName": "java.lang.String",
+        "fullName": "java.util.List<java.lang.String>",
+        "name": "List",
+        "astTypeName": "ValueType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.lang.reflect.Constructor<?>",
+        "name": "Constructor",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      },
+      {
+        "methods": [
+          {
+            "UUID": "e7030ef6-19f9-42e1-a4f8-51eac0cabd65",
+            "parameters": [],
+            "name": "getClock",
+            "genericFullTypeNames": [],
+            "returnTypeName": "java.time.Clock",
+            "isAbstract": true,
+            "isStatic": false,
+            "methodType": "METHOD"
+          }
+        ],
+        "genericFullTypeNames": [],
+        "parentClasses": [],
+        "childClasses": [],
+        "fields": [],
+        "fullName": "jakarta.validation.ClockProvider",
+        "name": "ClockProvider",
+        "astTypeName": "ClassType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": true
+      },
+      {
+        "originAstTypeName": "ClassType",
+        "fullName": "java.time.Clock",
+        "name": "Clock",
+        "astTypeName": "LazyType",
+        "nullable": true,
+        "throwable": false,
+        "referenceType": true,
+        "isAbstract": false
+      }
+    ],
+    "uri": "/Users/freddymay/java/Javalin/Javalin/src/main/java/api/v1/finder/service/FinderService.java",
+    "UUID": "a820d63b-eb0a-4d46-a057-01456d28ffd5",
+    "testScenarios": [
+      {
+        "testCases": [
+          {
+            "testSteps": [
+              {
+                "namedMethodId": 79.0,
+                "inputOffset": {
+                  "value": 12.0,
+                  "unit": "HOUR",
+                  "referencedTestStepId": 0.0,
+                  "offsetType": "END_OF_X",
+                  "id": -1.0,
+                  "name": "a",
+                  "description": "",
+                  "comment": ""
+                },
+                "outputOffset": {
+                  "value": 12.0,
+                  "unit": "HOUR",
+                  "referencedTestStepId": 0.0,
+                  "offsetType": "END_OF_X",
+                  "id": -1.0,
+                  "name": "a",
+                  "description": "",
+                  "comment": ""
+                },
+                "coveredRepresentatives": [
+                  90.0,
+                  92.0
+                ],
+                "id": 62.0,
+                "name": "M1"
+              }
+            ],
+            "coveredInstanceRepresentatives": [
+              89.0
+            ],
+            "testCaseType": "POSITIVE",
+            "id": 63.0,
+            "name": "p1",
+            "description": ""
+          }
+        ],
+        "instances": [
+          {
+            "testClassId": 63.0,
+            "genericModifiers": [],
+            "id": 78.0,
+            "name": "C1"
+          }
+        ],
+        "methods": [
+          {
+            "instanceId": 78.0,
+            "testMethodId": 67.0,
+            "genericModifiers": [],
+            "id": 79.0,
+            "name": "M1"
+          }
+        ],
+        "valid": true,
+        "id": 80.0,
+        "name": "Scenario1",
+        "description": "A description for the scenario",
+        "comment": "A new scenario"
+      }
+    ],
+    "language": "JAVA",
+    "classes": [
+      {
+        "methods": [
+          {
+            "inputFactors": [
+              {
+                "equivalenceClasses": [
+                  {
+                    "representatives": [
+                      {
+                        "value": "{\"fullTypeName\":\"java.lang.String\",\"valueSemantics\":{\"kind\":\"DEFAULT\"},\"value\":\"\"}",
+                        "boundaryType": "NO",
+                        "priority": 0.0,
+                        "id": 90.0,
+                        "name": "ExampleName"
+                      }
+                    ],
+                    "equivalenceClassType": "VALID",
+                    "namedInstanceId": 0.0,
+                    "namedMethodId": 79.0,
+                    "id": 83.0,
+                    "name": "valid"
+                  },
+                  {
+                    "representatives": [],
+                    "equivalenceClassType": "VALID",
+                    "namedInstanceId": 0.0,
+                    "namedMethodId": 79.0,
+                    "id": 84.0,
+                    "name": "boundaries"
+                  },
+                  {
+                    "representatives": [],
+                    "equivalenceClassType": "INVALID",
+                    "namedInstanceId": 0.0,
+                    "namedMethodId": 79.0,
+                    "id": 85.0,
+                    "name": "invalid"
+                  }
+                ],
+                "fullTypeName": "java.lang.String",
+                "parameterModifier": "NONE",
+                "portType": "INPUT_PARAMETER",
+                "id": 64.0,
+                "name": "body"
+              }
+            ],
+            "outputFactors": [
+              {
+                "equivalenceClasses": [
+                  {
+                    "representatives": [
+                      {
+                        "value": "{\"fullTypeName\":\"java.lang.String\",\"valueSemantics\":{\"kind\":\"DEFAULT\"},\"value\":\"\"}",
+                        "boundaryType": "NO",
+                        "priority": 0.0,
+                        "id": 92.0,
+                        "name": "ExampleName"
+                      }
+                    ],
+                    "equivalenceClassType": "VALID",
+                    "namedInstanceId": 0.0,
+                    "namedMethodId": 79.0,
+                    "id": 91.0,
+                    "name": "valid"
+                  }
+                ],
+                "fullTypeName": "java.lang.String",
+                "parameterModifier": "NONE",
+                "portType": "EXPECTED_RESULT",
+                "id": 66.0,
+                "name": "Expected Value"
+              },
+              {
+                "equivalenceClasses": [],
+                "fullTypeName": "java.lang.Exception",
+                "parameterModifier": "NONE",
+                "portType": "EXCEPTION",
+                "id": 65.0,
+                "name": "Exception"
+              },
+              {
+                "equivalenceClasses": [],
+                "fullTypeName": "java.lang.String",
+                "parameterModifier": "NONE",
+                "portType": "SIDE_EFFECT",
+                "id": 82.0,
+                "name": "Side Effects"
+              },
+              {
+                "equivalenceClasses": [],
+                "fullTypeName": "java.lang.String",
+                "parameterModifier": "NONE",
+                "portType": "CUSTOM_ASSERTION",
+                "id": 81.0,
+                "name": "Custom Assertions"
+              }
+            ],
+            "exceptionsThrown": [
+              "java.io.IOException",
+              "jakarta.validation.ValidationException"
+            ],
+            "isAsync": false,
+            "isStatic": false,
+            "id": 67.0,
+            "name": "runQuery"
+          }
+        ],
+        "uri": "/Users/freddymay/java/Javalin/Javalin/src/main/java/api/v1/finder/service/FinderService.java",
+        "classPort": {
+          "equivalenceClasses": [
+            {
+              "representatives": [
+                {
+                  "value": "{\"fullTypeName\":\"api.v1.finder.service.FinderService\",\"valueSemantics\":{\"kind\":\"FACTORY\",\"name\":\"mock\",\"rank\":1},\"value\":[]}",
+                  "boundaryType": "NO",
+                  "priority": 0.0,
+                  "id": 89.0,
+                  "name": "ExampleName"
+                }
+              ],
+              "equivalenceClassType": "VALID",
+              "namedInstanceId": 78.0,
+              "namedMethodId": 0.0,
+              "id": 86.0,
+              "name": "valid",
+              "comment": "Set comments here"
+            },
+            {
+              "representatives": [],
+              "equivalenceClassType": "VALID",
+              "namedInstanceId": 78.0,
+              "namedMethodId": 0.0,
+              "id": 87.0,
+              "name": "boundaries"
+            },
+            {
+              "representatives": [],
+              "equivalenceClassType": "INVALID",
+              "namedInstanceId": 78.0,
+              "namedMethodId": 0.0,
+              "id": 88.0,
+              "name": "invalid"
+            }
+          ],
+          "fullTypeName": "api.v1.finder.service.FinderService",
+          "parameterModifier": "NONE",
+          "portType": "CLASS_INSTANCE",
+          "id": 62.0,
+          "name": "this"
+        },
+        "id": 63.0,
+        "name": "FinderService"
+      }
+    ],
+    "testType": "METHOD_TEST",
+    "activeScenarioId": 80.0,
+    "knownTypes": [],
+    "id": 61.0,
+    "name": "FinderService"
+  }
+}

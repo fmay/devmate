@@ -1,20 +1,14 @@
 package api.v1.finder.service;
 
 import api.v1.core.util.BodyToObject;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.gson.Gson;
 import com.google.inject.Inject;
-import api.v1.core.util.ValidationMessages;
 import api.v1.finder.request.FinderRequest;
 import api.v1.finder.response.FinderResponse;
 import jakarta.validation.*;
 import api.v1.finder.repository.IFinderRepository;
 import api.v1.core.logging.ILogging;
-
 import java.io.IOException;
-import java.util.Set;
 
 public class FinderService implements IFinderService {
 
